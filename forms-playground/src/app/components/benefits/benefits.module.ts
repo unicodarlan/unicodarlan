@@ -5,6 +5,8 @@ import { CardsComponent } from './cards/cards.component';
 import { ManualComponent } from './manual/manual.component';
 import { RoutersComponent } from './routers/routers.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 const routes: Routes = [
   { path: '', redirectTo: 'benefits', pathMatch: 'full' },
@@ -23,7 +25,9 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     BenefitsComponent,
